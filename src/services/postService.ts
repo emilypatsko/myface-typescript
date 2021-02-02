@@ -36,7 +36,7 @@ export async function likePost(userId: number, postId: number): Promise<void> {
 
 export async function dislikePost(userId: number, postId: number): Promise<void> {
     return createInteraction(userId, postId, "DISLIKE");
-}
+} 
 
 async function toPostModel(post: Post): Promise<PostModel> {
     return {

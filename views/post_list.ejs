@@ -6,10 +6,17 @@
 <ol>
     <% results.forEach(function(post) {%>
         <li>
-            <%= post.message %>
+            Post ID: <%= post.id %>, Message: <%= post.message %>, Image: <%= post.imageUrl %>, Created: <%= post.createdAt %>,
+            Posted by: <%= post.postedBy.username %>, Likes: <%= post.likedBy.length %>, Dislikes: <%= post.dislikedBy.length %>
         </li>
     <% }); %>
 </ol>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %>
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
 </body>
 <%- include('_footer') -%>
 </html>
