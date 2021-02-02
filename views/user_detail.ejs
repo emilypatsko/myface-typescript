@@ -2,9 +2,44 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1><%= name %></h1>
 
-<img src = "<%= profileImageUrl %>" alt = "Text for if the URL doesn't work" width = 100px>
+    <img src = "<%= coverImageUrl %>" alt = "Cover picture not available." max.width = 100%> <br>
+    <h1><%= name %></h1>
+    <h2><%= username %></h2>
+    <img src = "<%= profileImageUrl %>" alt = "Profile picture not available." width = 200px>
+
+    <h3>Posts</h3>
+    <ol>
+        <% posts.forEach(function(post) {%>
+            <li> 
+                Message: <%= post.message %>, 
+                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
+                Created: <%= post.createdAt %> <br>
+            </li>
+        <% }); %>
+    </ol>    
+
+    <h3>Likes</h3>
+    <ol>
+        <% likes.forEach(function(post) {%>
+            <li> 
+                Message: <%= post.message %>, 
+                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
+                Created: <%= post.createdAt %> <br>
+            </li>
+        <% }); %>
+    </ol>   
+
+    <h3>Dislikes</h3>
+    <ol>
+        <% dislikes.forEach(function(post) {%>
+            <li> 
+                Message: <%= post.message %>, 
+                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
+                Created: <%= post.createdAt %> <br>
+            </li>
+        <% }); %>
+    </ol>   
 </body>
 <%- include('_footer') -%>
 </html>
