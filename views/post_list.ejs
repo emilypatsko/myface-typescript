@@ -5,7 +5,7 @@
 <h1>Posts</h1>
 <ol>
     <% results.forEach(function(post) {%>
-        <li>
+        <li id="<%= post.id %>">
             Post ID: <%= post.id %>, 
             Message: <%= post.message %>, 
             Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>

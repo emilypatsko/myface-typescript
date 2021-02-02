@@ -38,7 +38,7 @@ router.post('/:postId/like/', async (request, response) => {
     const returnUrl = request.params?.returnUrl;
 
     await likePost(userId, postId);
-    response.redirect(returnUrl || "/posts/");
+    response.redirect(returnUrl || "/posts/" + `#${postId}`);
 });
 
 router.post('/:postId/dislike/', async (request, response) => {
