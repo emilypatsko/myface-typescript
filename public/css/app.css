@@ -1,1 +1,19 @@
 /* Add your styles here. */
+/* could create separate css file for each page we want to style and then import them all here like so */
+@import "user_detail.css";
+@import "nav_bar.css";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header, body, footer {
+    width: 100%;
+}
+
+footer {
+    color:#FFCB77;
+    background-color:  #227C9D;
+}
+

@@ -3,10 +3,11 @@
 <%- include('_header') -%>
 <body>
 
-    <img src = "<%= coverImageUrl %>" alt = "Cover photo" max.width = 100%> <br>
-    <h1 name="name"><%= name %></h1>
-    <h2 name="username"><%= username %></h2>
-    <img src = "<%= profileImageUrl %>" alt = "Profile photo" width = 200px>
+    <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>
+        <h1 name="name"><%= name %></h1>        
+        <img class = "profile-photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
+        <h2 name="username"><%= username %></h2>
+    </div>
 
     <h3>Posts</h3>
     <ol>
