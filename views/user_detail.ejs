@@ -5,42 +5,48 @@
 
     <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>
         <h1 name="name"><%= name %></h1>        
-        <img class = "profile-photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
+        <img class = "profile_photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
         <h2 name="username"><%= username %></h2>
     </div>
 
-    <h3>Posts</h3>
-    <ol>
+    <div class = "posts_container" id = "user_posts"> 
+        <div class = "container_header"> 
+            <h2>Posts</h2>
+        </div>
         <% posts.forEach(function(post) {%>
-            <li> 
-                Message: <%= post.message %>, 
-                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
-                Created: <%= post.createdAt %> <br>
-            </li>
+            <div class = "user_post"> 
+                <p class = "post_timestamp"><%= post.createdAt %></p>
+                <p class = "post_message"><%= post.message %></p> 
+                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+            </div>
         <% }); %>
-    </ol>    
+    </div>  
 
-    <h3>Likes</h3>
-    <ol>
+    <div class = "posts_container" id = "user_likes"> 
+        <div class = "container_header"> 
+            <h2>Likes</h2>
+        </div>
         <% likes.forEach(function(post) {%>
-            <li> 
-                Message: <%= post.message %>, 
-                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
-                Created: <%= post.createdAt %> <br>
-            </li>
+            <div class = "user_post"> 
+                <p class = "post_timestamp"><%= post.createdAt %></p>
+                <p class = "post_message"><%= post.message %></p> 
+                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+            </div>
         <% }); %>
-    </ol>   
+    </div>  
 
-    <h3>Dislikes</h3>
-    <ol>
+    <div class = "posts_container" id = "user_dislikes"> 
+        <div class = "container_header"> 
+            <h2>Dislikes</h2>
+        </div>
         <% dislikes.forEach(function(post) {%>
-            <li> 
-                Message: <%= post.message %>, 
-                Image: <a href="<%= post.imageUrl %>" target="_blank">Click here to view image</a> <br>
-                Created: <%= post.createdAt %> <br>
-            </li>
+            <div class = "user_post"> 
+                <p class = "post_timestamp"><%= post.createdAt %></p>
+                <p class = "post_message"><%= post.message %></p> 
+                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+            </div>
         <% }); %>
-    </ol>   
+    </div>  
 </body>
 <%- include('_footer') -%>
 </html>
