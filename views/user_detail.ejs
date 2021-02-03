@@ -9,15 +9,27 @@
         <h2 name="username"><%= username %></h2>
     </div>
 
+
+    <div class = "posts_navbar">
+        <ul>
+            <a href = "#user_posts">Posts</a>
+            <a href = "#user_likes">Likes</a>
+            <a href = "#user_dislikes">Dislikes</a>
+        </ul>
+    </div>
+
     <div class = "posts_container" id = "user_posts"> 
         <div class = "container_header"> 
             <h2>Posts</h2>
         </div>
         <% posts.forEach(function(post) {%>
             <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>
-                <p class = "post_message"><%= post.message %></p> 
-                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+                <p class = "post_timestamp"><%= post.createdAt %></p>  
+                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
+                <p class = "post_message"><%= post.message %></p>                
+                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
+                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
+                </p>                
             </div>
         <% }); %>
     </div>  
@@ -28,9 +40,12 @@
         </div>
         <% likes.forEach(function(post) {%>
             <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>
-                <p class = "post_message"><%= post.message %></p> 
-                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+                <p class = "post_timestamp"><%= post.createdAt %></p>  
+                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
+                <p class = "post_message"><%= post.message %></p>                
+                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
+                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
+                </p>                
             </div>
         <% }); %>
     </div>  
@@ -41,9 +56,12 @@
         </div>
         <% dislikes.forEach(function(post) {%>
             <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>
-                <p class = "post_message"><%= post.message %></p> 
-                <p class = "post_link"><a href="<%= post.imageUrl %>" target="_blank">Image</a></p>
+                <p class = "post_timestamp"><%= post.createdAt %></p>  
+                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
+                <p class = "post_message"><%= post.message %></p>                
+                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
+                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
+                </p>                
             </div>
         <% }); %>
     </div>  

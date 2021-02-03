@@ -12,6 +12,29 @@ body {
     color: var(--color6);
 }
 
+.posts_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    background-color: var(--color6);
+    color: var(--color5);
+}
+
+.posts_navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+  
+.posts_navbar a {
+    display: block;
+    text-align: center;
+    color: var(--color5);
+    text-decoration: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    /* transition: transform 0.3s ease-out; */
+}
+
 .user_info {
     width: 100%;
     display: flex;
@@ -57,17 +80,41 @@ body {
 .post_message {
     text-align: left;
     font-size: larger;
-    padding: 0.2em 1em;
+    padding: 0.2em 1.6em;
+    font-weight: 500;
+}
+
+.post_left_quote {
+    text-align: left;
+    font-size: larger;
+    padding: 0 0.25em;
+}
+
+.post_right_quote {
+    text-align: right;
+    font-size: larger;
+    padding: 0 0.25em;
 }
 
 .post_link {
     text-align: right;
-    font-size: small;
+    font-size: x-large;
+    font-weight: normal;
+    color: var(--color2);
+}
+
+.post_link:visited {
+    color: grey;
 }
 
 @media only screen and (max-width: 500px) {
     .profile_photo {
         width: 50%;
+    }
+    
+    .posts_navbar a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     .user_post {
