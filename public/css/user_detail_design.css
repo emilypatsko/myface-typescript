@@ -1,0 +1,149 @@
+:root {
+    /* colours */
+    --bg-color: #252A38;
+    --darker-bg-color: #151820;
+    --fg-color: #DCDCDC;
+    --primary-color: #2985FF;
+    --overlay: rgba(37, 42, 56, 56); 
+
+    /* font weights */
+    --regular-font: 400;
+    --bold-font: 600;
+    --lighter-font: 300;
+
+    /* mobile font sizes and line heights */
+    --title-font-mob: 24px;
+    --subtitle-font-mob: 20px;
+    --button-font-mob: 20px;
+    --body-font-mob: 14px;
+    --sec-font-mob: 10px;
+
+    --title-lh-mob: 32px;
+    --subtitle-lh-mob: 24px;
+    --button-lh-mob: 32px;
+    --body-lh-mob: 20px;
+    --sec-lh-mob: 16px;
+
+    /* tablet font sizes and line heights */
+    --title-font-tab: 24px;
+    --subtitle-font-tab: 20px;
+    --button-font-tab: 20px;
+    --body-font-tab: 14px;
+    --sec-font-tab: 10px;
+
+    --title-lh-tab: 32px;
+    --subtitle-lh-tab: 24px;
+    --button-lh-tab: 32px;
+    --body-lh-tab: 20px;
+    --sec-lh-tab: 16px;
+
+    /* desktop font sizes and line heights */
+    --title-font-desk: 32px;
+    --subtitle-font-desk: 24px;
+    --button-font-desk: 24px;
+    --body-font-desk: 16px;
+    --sec-font-desk: 12px;
+
+    --title-lh-desk: 40px;
+    --subtitle-lh-desk: 32px;
+    --button-lh-desk: 40px;
+    --body-lh-desk: 24px;
+    --sec-lh-desk: 20px;
+
+    /* spacing for elements on mobile */
+    --gutters-mob: 24px;
+    --card-sep-mob: 24px;
+    --sec-spacing-mob: 40px;
+    --card-padding-mob: 16px;
+    
+    /* spacing for elements on tablet */
+    --gutters-tab: 32px;
+    --card-sep-tab: 32px;
+    --sec-spacing-tab: 48px;
+    --card-padding-tab: 16px;
+
+    /* spacing for elements on desktop */
+    --gutters-desk: 48px;
+    --card-sep-desk: 48px;
+    --sec-spacing-desk: 80px;
+    --card-padding-desk: 24px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-weight: var(--regular-font);
+}
+
+.user_info {
+    width: 100%;
+    background-image: var(--coverImageUrl);
+    background-size: cover;   
+    background-position: center;
+    position: relative;
+}
+
+.profile_photo {
+    border-radius: 50%;
+    border: var(--fg-color) 5px solid;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.profile_username {
+    font-weight: var(--bold-font);
+}
+
+.profile_email {
+    font-weight: var(--lighter-font);
+}
+
+@media only screen and (max-width: 425px) {
+    .user_info {
+        height: 24vh;
+    }
+
+    .profile_photo {
+        width: 30%;
+        /* width: calc(4*var(--title-lh-mob)); */
+        left: var(--gutters-mob);
+    }
+
+    .profile_name {
+        font-size: var(--title-font-mob);
+    }
+
+    .profile_username {
+        font-size: var(--sec-font-mob);        
+    }
+
+    .profile_email {
+        font-size: var(--sec-font-mob);
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .user_info {
+        height: 30vh;
+    }
+
+    .profile_photo {
+        width: 25%;
+        /* width: calc(4*var(--title-lh-tab)); */
+        left: var(--gutters-mob);
+    }
+}
+
+@media only screen and (min-width: 728px) {
+    .user_info {
+        height: 30vh;
+    }
+
+    .profile_photo {
+        width: 22%;
+        left: var(--gutters-tab);
+    }
+}
+
+

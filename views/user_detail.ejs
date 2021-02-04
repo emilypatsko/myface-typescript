@@ -1,14 +1,13 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
 <body>
 
-    <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>
-        <h1 name="name"><%= name %></h1>        
+    <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>     
         <img class = "profile_photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
-        <h2 name="username"><%= username %></h2>
+        <h1 class = "profile_name"><%= name %></h1>
+        <p class = "profile_username"><%= username %></p>
+        <p class = "profile_email"><%= email %></p>
     </div>
-
 
     <div class = "posts_navbar">
         <ul>

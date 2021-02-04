@@ -1,13 +1,15 @@
 /* Add your styles here. */
 /* could create separate css file for each page we want to style and then import them all here like so */
-@import "user_detail.css";
-@import "nav_bar.css";
+/* @import "user_detail.css";
+@import "nav_bar.css"; */
+@import "user_detail_design.css";
+
 
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
+    font-family: 'Segoe UI', 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header, body, footer {
@@ -15,7 +17,6 @@ header, body, footer {
 }
 
 footer {
-    color:#FFCB77;
-    background-color:  #227C9D;
+
 }
 
