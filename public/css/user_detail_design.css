@@ -4,7 +4,8 @@
     --darker-bg-color: #151820;
     --fg-color: #DCDCDC;
     --primary-color: #2985FF;
-    --overlay: rgba(37, 42, 56, 56); 
+    --overlay-color-full: rgba(37, 42, 56, 56); 
+    --overlay-color-none: rgba(37, 42, 56, 0);
 
     /* font weights */
     --regular-font: 400;
@@ -73,6 +74,7 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-weight: var(--regular-font);
+    overflow: hidden;
 }
 
 .user_info {
@@ -81,69 +83,211 @@ body {
     background-size: cover;   
     background-position: center;
     position: relative;
+    z-index: 0;
+}
+
+.user_credentials {
+    width: 100%;
+    height: 60px; /* how to make it ~50% of image height? */
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to left, var(--overlay-color-full), var(--overlay-color-none));
+    margin-bottom: 0;
+    z-index: 1;
 }
 
 .profile_photo {
     border-radius: 50%;
-    border: var(--fg-color) 5px solid;
+    border: var(--fg-color) 4px solid;
     position: absolute;
     bottom: 0;
     transform: translateY(50%);
+    z-index: 2;
+}
+
+.profile_name {
+    font-weight: var(--regular-font);   
+    padding-right: 0;
+    position: absolute;
+    bottom: 0;
 }
 
 .profile_username {
-    font-weight: var(--bold-font);
+    font-weight: var(--bold-font); 
+    padding-right: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(105%);
 }
 
 .profile_email {
-    font-weight: var(--lighter-font);
+    font-weight: var(--lighter-font); 
+    padding-right: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(210%);
 }
 
+/* Mobile */
 @media only screen and (max-width: 425px) {
+    body {
+        line-height: var(--body-lh-mob);
+    }
+
+    div {
+        margin-bottom: var(--sec-spacing-mob);
+    }
+
     .user_info {
         height: 24vh;
     }
 
+    .user_credentials {
+        padding-left: calc(2*var(--gutters-mob) + 28%);
+    }
+
     .profile_photo {
         width: 30%;
-        /* width: calc(4*var(--title-lh-mob)); */
         left: var(--gutters-mob);
     }
 
     .profile_name {
-        font-size: var(--title-font-mob);
+        font-size: var(--title-font-mob);   
+        line-height: var(--title-lh-mob); 
     }
 
     .profile_username {
-        font-size: var(--sec-font-mob);        
+        font-size: var(--body-font-mob);          
+        line-height: var(--body-lh-mob);  
     }
 
     .profile_email {
-        font-size: var(--sec-font-mob);
+        font-size: var(--body-font-mob);
+        line-height: var(--body-lh-mob);
     }
 }
 
+/* tablet size */
 @media only screen and (min-width: 425px) {
+    body {
+        line-height: var(--body-lh-mob);
+    }
+
+    div {
+        margin-bottom: var(--sec-spacing-mob);
+    }
+
     .user_info {
         height: 30vh;
+    }
+
+    .user_credentials {
+        padding-left: calc(2*var(--gutters-mob) + 25%);
     }
 
     .profile_photo {
         width: 25%;
-        /* width: calc(4*var(--title-lh-tab)); */
         left: var(--gutters-mob);
+    }
+
+    .profile_name {
+        font-size: var(--title-font-mob);   
+        line-height: var(--title-lh-mob); 
+    }
+
+    .profile_username {
+        font-size: var(--body-font-mob);          
+        line-height: var(--body-lh-mob);  
+    }
+
+    .profile_email {
+        font-size: var(--body-font-mob);
+        line-height: var(--body-lh-mob);
     }
 }
 
-@media only screen and (min-width: 728px) {
+/* Small desktop */
+@media only screen and (min-width: 768px) {
+    body {
+        line-height: var(--body-lh-tab);
+    }
+
+    div {
+        margin-bottom: var(--sec-spacing-tab);
+    }
+
     .user_info {
         height: 30vh;
     }
 
+    .user_credentials {
+        padding-left: calc(2*var(--gutters-tab) + 22%);
+    }
+
     .profile_photo {
-        width: 22%;
+        width: 20%;
         left: var(--gutters-tab);
+    }
+
+    .profile_name {
+        font-size: var(--title-font-tab);   
+        line-height: var(--title-lh-tab); 
+    }
+
+    .profile_username {
+        font-size: var(--body-font-tab);          
+        line-height: var(--body-lh-tab);  
+    }
+
+    .profile_email {
+        font-size: var(--body-font-tab);
+        line-height: var(--body-lh-tab);
     }
 }
 
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    body {
+        line-height: var(--body-lh-desk);
+    }
+
+    div {
+        margin-bottom: var(--sec-spacing-desk);
+    }
+
+    .banner_div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .user_info {
+        height: 30vh;
+        width: 66%;
+    }
+
+    .user_credentials {
+        padding-left: calc(2*var(--gutters-desk) + 170px);
+    }
+
+    .profile_photo {
+        width: 170px;
+        left: var(--gutters-desk);
+    }
+
+    .profile_name {
+        font-size: var(--title-font-desk);   
+        line-height: var(--title-lh-desk); 
+    }
+
+    .profile_username {
+        font-size: var(--body-font-desk);          
+        line-height: var(--body-lh-desk);  
+    }
+
+    .profile_email {
+        font-size: var(--body-font-desk);
+        line-height: var(--body-lh-desk);
+    }
+}
 

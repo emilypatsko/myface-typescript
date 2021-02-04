@@ -2,11 +2,15 @@
 <%- include('_head') -%>
 <body>
 
-    <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>     
-        <img class = "profile_photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
-        <h1 class = "profile_name"><%= name %></h1>
-        <p class = "profile_username"><%= username %></p>
-        <p class = "profile_email"><%= email %></p>
+    <div class = "banner_div">
+        <div class = "user_info" style = "--coverImageUrl: url(<%= coverImageUrl %>)";>     
+            <img class = "profile_photo" src = "<%= profileImageUrl %>" alt = "Profile photo">
+            <div class = "user_credentials">
+                <h1 class = "profile_name"><%= name %></h1>
+                <p class = "profile_username"><%= username %></p>
+                <p class = "profile_email"><%= email %></p>
+            </div>
+        </div>
     </div>
 
     <div class = "posts_navbar">
