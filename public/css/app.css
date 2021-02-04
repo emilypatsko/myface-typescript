@@ -3,6 +3,7 @@
 /* @import "user_detail.css";
 @import "nav_bar.css"; */
 @import "user_detail_design.css";
+@import "nav_bar_design.css";
 
 
 * {
@@ -16,7 +17,4 @@ header, body, footer {
     width: 100%;
 }
 
-footer {
-
-}
 

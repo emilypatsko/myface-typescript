@@ -1,5 +1,6 @@
 <html lang="en-gb">
 <%- include('_head') -%>
+<%- include('_header') -%>
 <body>
 
     <div class = "banner_div">
@@ -21,53 +22,48 @@
         </ul>
     </div>
 
-    <div class = "posts_container" id = "user_posts"> 
-        <div class = "container_header"> 
-            <h2>Posts</h2>
+    <div class = "all_posts_container">
+        <div class = "posts_container" id = "user_posts">
+            <% posts.forEach(function(post) {%>
+                <div class = "user_post"> 
+                    <!-- <img class = "post_image" src = "<%= post.imageUrl %>"> -->
+                    <p class = "post_timestamp"><%= post.createdAt %></p>  
+                    <p class = "post_message"><%= post.message %></p>        
+                    <!-- <a class = "post_link" href= target="_blank"><i class="fas fa-image"></i></a>                                    -->
+                </div>
+            <% }); %>
         </div>
-        <% posts.forEach(function(post) {%>
-            <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>  
-                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
-                <p class = "post_message"><%= post.message %></p>                
-                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
-                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
-                </p>                
-            </div>
-        <% }); %>
-    </div>  
 
-    <div class = "posts_container" id = "user_likes"> 
-        <div class = "container_header"> 
-            <h2>Likes</h2>
-        </div>
-        <% likes.forEach(function(post) {%>
-            <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>  
-                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
-                <p class = "post_message"><%= post.message %></p>                
-                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
-                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
-                </p>                
+        <div class = "posts_container" id = "user_likes"> 
+            <div class = "container_header"> 
+                <h2>Likes</h2>
             </div>
-        <% }); %>
-    </div>  
+            <% likes.forEach(function(post) {%>
+                <div class = "user_post"> 
+                    <p class = "post_timestamp"><%= post.createdAt %></p>  
+                    <p class = "post_message"><%= post.message %></p>                
+                        <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
+                    </p>                
+                </div>
+            <% }); %>
+        </div>  
 
-    <div class = "posts_container" id = "user_dislikes"> 
-        <div class = "container_header"> 
-            <h2>Dislikes</h2>
-        </div>
-        <% dislikes.forEach(function(post) {%>
-            <div class = "user_post"> 
-                <p class = "post_timestamp"><%= post.createdAt %></p>  
-                <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
-                <p class = "post_message"><%= post.message %></p>                
-                <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
-                    <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
-                </p>                
+        <div class = "posts_container" id = "user_dislikes"> 
+            <div class = "container_header"> 
+                <h2>Dislikes</h2>
             </div>
-        <% }); %>
-    </div>  
+            <% dislikes.forEach(function(post) {%>
+                <div class = "user_post"> 
+                    <p class = "post_timestamp"><%= post.createdAt %></p>  
+                    <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
+                    <p class = "post_message"><%= post.message %></p>                
+                    <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
+                        <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
+                    </p>                
+                </div>
+            <% }); %>
+        </div>  
+    </div>
 </body>
 <%- include('_footer') -%>
 </html>

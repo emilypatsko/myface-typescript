@@ -74,7 +74,6 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-weight: var(--regular-font);
-    overflow: hidden;
 }
 
 .user_info {
@@ -126,6 +125,29 @@ body {
     position: absolute;
     bottom: 0;
     transform: translateY(210%);
+}
+
+.all_posts_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.posts_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.user_post {
+    width: 33%;
+    height: 200px;
+    background-color: var(--darker-bg-color);
+}
+
+.post_image {
+    object-fit: scale-down;
 }
 
 /* Mobile */
@@ -243,12 +265,20 @@ body {
         font-size: var(--body-font-tab);
         line-height: var(--body-lh-tab);
     }
+
+    .posts_navbar {
+        display: none;
+    }
 }
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
     body {
         line-height: var(--body-lh-desk);
+    }
+
+    .posts_navbar {
+        display: none;
     }
 
     div {
@@ -288,6 +318,10 @@ body {
     .profile_email {
         font-size: var(--body-font-desk);
         line-height: var(--body-lh-desk);
+    }
+
+    .posts_container, .likes_container, .dislikes_container {
+        width: 66%;
     }
 }
 
