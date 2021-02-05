@@ -22,8 +22,12 @@
         </ul>
     </div>
 
+    <button type = "button" id = "colourButton" onclick = "changeBackgroundColor()">
+        Click me for a fun surprise!
+    </button>
+
     <div class = "all_posts_container">
-        <h2 class = "subtitle"><%= name.substr(0, name.indexOf(' '))%>'s Posts</h2>
+        <h2 class = "subtitle posts_header"><%= name.substr(0, name.indexOf(' '))%>'s Posts</h2>
         <div class = "posts_container" id = "user_posts">
             <% posts.forEach(function(post) {%>
                 <div class = "user_post"> 
