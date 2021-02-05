@@ -167,10 +167,6 @@ body {
         height: 24vh;
     }
 
-    .user_credentials {
-        /* padding-left: calc(2*var(--gutters-mob) + 28%); */
-    }
-
     .profile_photo {
         width: 30%;
         left: var(--gutters-mob);
@@ -206,6 +202,15 @@ body {
     .user_post {
         /* padding: var(--card-padding-mob); */
         margin-bottom: var(--card-padding-mob);
+    }
+
+    .post_message {
+        font-size: var(--body-font-mob);
+    }
+
+    .post_timestamp {
+        font-size: var(--sec-font-mob);
+        font-weight: var(--lighter-font);
     }
 
 }

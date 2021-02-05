@@ -32,7 +32,7 @@
             <% posts.forEach(function(post) {%>
                 <div class = "user_post"> 
                     <!-- <img class = "post_image" src = "<%= post.imageUrl %>"> -->
-                    <p class = "post_timestamp"><%= post.createdAt %></p>  
+                    <p class = "post_timestamp"><%= post.createdAt.substr(0,10) %></p>  
                     <p class = "post_message"><%= post.message %></p>        
                     <!-- <a class = "post_link" href= target="_blank"><i class="fas fa-image"></i></a>                                    -->
                 </div>
@@ -43,7 +43,7 @@
         <div class = "posts_container" id = "user_likes"> 
             <% likes.forEach(function(post) {%>
                 <div class = "user_post"> 
-                    <p class = "post_timestamp"><%= post.createdAt %></p>  
+                    <p class = "post_timestamp"><%= post.createdAt.substr(0,10) %></p>  
                     <p class = "post_message"><%= post.message %></p>                
                         <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
                     </p>                
@@ -55,10 +55,8 @@
         <div class = "posts_container" id = "user_dislikes"> 
             <% dislikes.forEach(function(post) {%>
                 <div class = "user_post"> 
-                    <p class = "post_timestamp"><%= post.createdAt %></p>  
-                    <p class = "post_left_quote"><i class = "fas fa-quote-left"></i></p>
+                    <p class = "post_timestamp"><%= post.createdAt.substr(0,10) %></p>  
                     <p class = "post_message"><%= post.message %></p>                
-                    <p class = "post_right_quote"><i class="fas fa-quote-right"></i>
                         <a class = "post_link" href="<%= post.imageUrl %>" target="_blank"><i class="fas fa-image"></i></a>
                     </p>                
                 </div>

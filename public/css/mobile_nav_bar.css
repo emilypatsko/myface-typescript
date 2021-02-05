@@ -111,11 +111,23 @@
 }
 
 .mobile_nav_toggle {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     padding: var(--gutters-mob);
     z-index: 3;
+
+    background: none;
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-size: var(--title-font-mob);
+}
+
+.mobile_nav_toggle:active,
+.mobile_nav_toggle:focus {
+    outline: none;
+    border: none;
 }
 
 .blurred_bg {
