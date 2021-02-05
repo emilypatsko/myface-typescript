@@ -168,7 +168,7 @@ body {
     }
 
     .user_credentials {
-        padding-left: calc(2*var(--gutters-mob) + 28%);
+        /* padding-left: calc(2*var(--gutters-mob) + 28%); */
     }
 
     .profile_photo {
@@ -178,17 +178,20 @@ body {
 
     .profile_name {
         font-size: var(--title-font-mob);   
-        line-height: var(--title-lh-mob); 
+        line-height: var(--title-lh-mob);
+        padding-left: calc(2*var(--gutters-mob) + 28%); 
     }
 
     .profile_username {
         font-size: var(--body-font-mob);          
-        line-height: var(--body-lh-mob);  
+        line-height: var(--body-lh-mob); 
+        padding-left: calc(2*var(--gutters-mob) + 28%); 
     }
 
     .profile_email {
         font-size: var(--body-font-mob);
         line-height: var(--body-lh-mob);
+        padding-left: calc(2*var(--gutters-mob) + 28%);
     }
 
     .all_posts_container {
@@ -222,7 +225,7 @@ body {
     }
 
     .user_credentials {
-        padding-left: calc(2*var(--gutters-tab) + 25%);
+        
     }
 
     .profile_photo {
@@ -233,16 +236,19 @@ body {
     .profile_name {
         font-size: var(--title-font-tab);   
         line-height: var(--title-lh-tab); 
+        padding-left: calc(2*var(--gutters-tab) + 25%);
     }
 
     .profile_username {
         font-size: var(--body-font-tab);          
         line-height: var(--body-lh-tab);  
+        padding-left: calc(2*var(--gutters-tab) + 25%);
     }
 
     .profile_email {
         font-size: var(--body-font-tab);
         line-height: var(--body-lh-tab);
+        padding-left: calc(2*var(--gutters-tab) + 25%);
     }
 
     .all_posts_container {
@@ -261,7 +267,7 @@ body {
 }
 
 /* Small desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     body {
         line-height: var(--body-lh-desk);
     }
@@ -275,7 +281,7 @@ body {
     }
 
     .user_credentials {
-        padding-left: calc(2*var(--gutters-desk) + 22%);
+        /* padding-left: calc(2*var(--gutters-desk) + 22%); */
     }
 
     .profile_photo {
@@ -286,16 +292,19 @@ body {
     .profile_name {
         font-size: var(--title-font-desk);   
         line-height: var(--title-lh-desk); 
+        padding-left: calc(2*var(--gutters-desk) + 22%);
     }
 
     .profile_username {
         font-size: var(--body-font-desk);          
         line-height: var(--body-lh-desk);  
+        padding-left: calc(2*var(--gutters-desk) + 22%);
     }
 
     .profile_email {
         font-size: var(--body-font-desk);
         line-height: var(--body-lh-desk);
+        padding-left: calc(2*var(--gutters-desk) + 22%);
     }
 
     .posts_navbar {
@@ -343,7 +352,7 @@ body {
     }
 
     .user_credentials {
-        padding-left: calc(2*var(--gutters-desk) + 170px);
+        /* padding-left: calc(2*var(--gutters-desk) + 170px); */
     }
 
     .profile_photo {
@@ -354,16 +363,19 @@ body {
     .profile_name {
         font-size: var(--title-font-desk);   
         line-height: var(--title-lh-desk); 
+        padding-left: calc(2*var(--gutters-desk) + 170px);
     }
 
     .profile_username {
         font-size: var(--body-font-desk);          
         line-height: var(--body-lh-desk);  
+        padding-left: calc(2*var(--gutters-desk) + 170px);
     }
 
     .profile_email {
         font-size: var(--body-font-desk);
         line-height: var(--body-lh-desk);
+        padding-left: calc(2*var(--gutters-desk) + 170px);
     }
 
     .posts_container, .likes_container, .dislikes_container {

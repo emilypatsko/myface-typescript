@@ -1,0 +1,145 @@
+:root {
+    /* colours */
+    --bg-color: #252A38;
+    --darker-bg-color: #151820;
+    --fg-color: #DCDCDC;
+    --primary-color: #2985FF;
+    --overlay-color-full: rgba(37, 42, 56, 56); 
+    --overlay-color-none: rgba(37, 42, 56, 0);
+
+    /* font weights */
+    --regular-font: 400;
+    --bold-font: 600;
+    --lighter-font: 300;
+
+    /* mobile font sizes and line heights */
+    --title-font-mob: 24px;
+    --subtitle-font-mob: 20px;
+    --button-font-mob: 20px;
+    --body-font-mob: 14px;
+    --sec-font-mob: 10px;
+
+    --title-lh-mob: 32px;
+    --subtitle-lh-mob: 24px;
+    --button-lh-mob: 32px;
+    --body-lh-mob: 20px;
+    --sec-lh-mob: 16px;
+
+    /* tablet font sizes and line heights */
+    --title-font-tab: 24px;
+    --subtitle-font-tab: 20px;
+    --button-font-tab: 20px;
+    --body-font-tab: 14px;
+    --sec-font-tab: 10px;
+
+    --title-lh-tab: 32px;
+    --subtitle-lh-tab: 24px;
+    --button-lh-tab: 32px;
+    --body-lh-tab: 20px;
+    --sec-lh-tab: 16px;
+
+    /* desktop font sizes and line heights */
+    --title-font-desk: 32px;
+    --subtitle-font-desk: 24px;
+    --button-font-desk: 24px;
+    --body-font-desk: 16px;
+    --sec-font-desk: 12px;
+
+    --title-lh-desk: 40px;
+    --subtitle-lh-desk: 32px;
+    --button-lh-desk: 40px;
+    --body-lh-desk: 24px;
+    --sec-lh-desk: 20px;
+
+    /* spacing for elements on mobile */
+    --gutters-mob: 24px;
+    --card-sep-mob: 24px;
+    --sec-spacing-mob: 40px;
+    --card-padding-mob: 16px;
+    
+    /* spacing for elements on tablet */
+    --gutters-tab: 32px;
+    --card-sep-tab: 32px;
+    --sec-spacing-tab: 48px;
+    --card-padding-tab: 16px;
+
+    /* spacing for elements on desktop */
+    --gutters-desk: 48px;
+    --card-sep-desk: 48px;
+    --sec-spacing-desk: 80px;
+    --card-padding-desk: 24px;
+}
+
+.mobile_nav {
+    background-color: var(--darker-bg-color);
+    color: var(--fg-color);
+    font-weight: var(--regular-font);
+
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0; 
+    margin: 0;
+
+    /* display: flex;
+    justify-content: center; */
+    display: none;
+}
+
+.mobile_nav_visible {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile_nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile_nav a {
+    display: block;
+    text-align: center;
+    color: var(--fg-color);
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding: 1em;
+}
+
+.mobile_nav_toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: var(--gutters-mob);
+    z-index: 3;
+}
+
+.blurred_bg {
+    filter: blur(3px);
+}
+
+@media only screen and (max-width: 425px) {
+    .mobile_nav {
+        padding: var(--gutters-mob);
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .mobile_nav {
+        padding: var(--gutters-tab);
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .mobile_nav {
+        display: none;
+    }
+
+    .mobile_nav_toggle {
+        display: none;
+    }
+}

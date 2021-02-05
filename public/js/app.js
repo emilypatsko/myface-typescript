@@ -15,3 +15,14 @@ function changeBackgroundColor() {
 function generateRandomColor() {
     return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;    
 }
+
+function toggleMobileNav() {
+    var navbar = document.getElementById("mobile_nav");
+    navbar.classList.toggle("mobile_nav_visible");
+    // var bgElements = document.querySelectorAll('.user_post');
+    var bgElements = document.querySelectorAll('body > *:not(header)');
+    // var bgElements = document.querySelectorAll('body > *:not(#mobile_nav, header)');
+    for (let i = 0; i < bgElements.length; i++) {
+        bgElements[i].classList.toggle("blurred_bg");
+    }
+}

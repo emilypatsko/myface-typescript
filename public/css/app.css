@@ -4,7 +4,7 @@
 @import "nav_bar.css"; */
 @import "user_detail_design.css";
 @import "nav_bar_design.css";
-
+@import "mobile_nav_bar.css";
 
 * {
     padding: 0px;
