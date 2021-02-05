@@ -74,7 +74,6 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-weight: var(--regular-font);
-    overflow: hidden;
 }
 
 .main_nav {

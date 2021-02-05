@@ -23,6 +23,7 @@
     </div>
 
     <div class = "all_posts_container">
+        <h2 class = "subtitle"><%= name.substr(0, name.indexOf(' '))%>'s Posts</h2>
         <div class = "posts_container" id = "user_posts">
             <% posts.forEach(function(post) {%>
                 <div class = "user_post"> 
@@ -34,10 +35,8 @@
             <% }); %>
         </div>
 
+        <h2 class = "subtitle">Posts <%= name.substr(0, name.indexOf(' '))%> Liked</h2>
         <div class = "posts_container" id = "user_likes"> 
-            <div class = "container_header"> 
-                <h2>Likes</h2>
-            </div>
             <% likes.forEach(function(post) {%>
                 <div class = "user_post"> 
                     <p class = "post_timestamp"><%= post.createdAt %></p>  
@@ -48,10 +47,8 @@
             <% }); %>
         </div>  
 
+        <h2 class = "subtitle">Posts <%= name.substr(0, name.indexOf(' '))%> Disliked</h2>
         <div class = "posts_container" id = "user_dislikes"> 
-            <div class = "container_header"> 
-                <h2>Dislikes</h2>
-            </div>
             <% dislikes.forEach(function(post) {%>
                 <div class = "user_post"> 
                     <p class = "post_timestamp"><%= post.createdAt %></p>  
