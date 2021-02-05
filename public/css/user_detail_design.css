@@ -105,7 +105,7 @@ body {
 }
 
 .profile_name {
-    font-weight: var(--regular-font);   
+    font-weight: var(--lighter-font);   
     padding-right: 0;
     position: absolute;
     bottom: 0;
@@ -150,7 +150,7 @@ body {
 }
 
 .subtitle {
-    font-weight: var(--regular-font);
+    font-weight: var(--lighter-font);
 }
 
 /* Mobile */
@@ -190,6 +190,10 @@ body {
         padding-left: calc(2*var(--gutters-mob) + 28%);
     }
 
+    .posts_navbar {
+        margin: var(--gutters-mob) 0;
+    }
+
     .all_posts_container {
         padding-top: var(--gutters-mob);
     }
@@ -197,6 +201,7 @@ body {
     .subtitle {
         font-size: var(--subtitle-font-mob);
         line-height: var(--subtitle-lh-mob);
+        padding: var(--gutters-mob) 0;
     }
 
     .user_post {
@@ -229,10 +234,6 @@ body {
         height: 30vh;
     }
 
-    .user_credentials {
-        
-    }
-
     .profile_photo {
         width: 25%;
         left: var(--gutters-tab);
@@ -256,6 +257,10 @@ body {
         padding-left: calc(2*var(--gutters-tab) + 25%);
     }
 
+    .posts_navbar {
+        margin: var(--gutters-tab) 0;
+    }
+
     .all_posts_container {
         padding-top: var(--gutters-tab);
     }
@@ -263,6 +268,7 @@ body {
     .subtitle {
         font-size: var(--subtitle-font-tab);
         line-height: var(--subtitle-lh-tab);
+        padding: var(--gutters-tab) 0;
     }
 
     .user_post {
@@ -323,6 +329,7 @@ body {
     .subtitle {
         font-size: var(--subtitle-font-desk);
         line-height: var(--subtitle-lh-desk);
+        padding: var(--gutters-desk) 0;
     }
 
     .user_post {
@@ -354,10 +361,6 @@ body {
     .user_info {
         height: 30vh;
         width: 66%;
-    }
-
-    .user_credentials {
-        /* padding-left: calc(2*var(--gutters-desk) + 170px); */
     }
 
     .profile_photo {
@@ -394,6 +397,7 @@ body {
     .subtitle {
         font-size: var(--subtitle-font-desk);
         line-height: var(--subtitle-lh-desk);
+        padding: var(--gutters-desk) 0;
     }
 
     .user_post {
